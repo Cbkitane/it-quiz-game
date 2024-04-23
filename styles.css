@@ -1,0 +1,241 @@
+/* Google Fonts: Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #f3f8ff;
+    --highlight: #e26ee5;
+    --secondary: #7e30e1;
+    --background: #49108b;
+}
+body {
+    height: 100vh;
+    background: var(--background);
+    display: grid;
+    place-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.phone-container {
+    position: relative;
+    width: 400px;
+    height: 700px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+
+#choices-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #ebedf0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.right {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+/* Main Container */
+#center-content {
+    height: 640px;
+    width: 100%;
+    /* background-color: var(--secondary); */
+    background: linear-gradient(125deg, var(--highlight), var(--background));
+
+    border-radius: 10px;
+    position: relative;
+    padding-top: 20px;
+}
+
+#start-menu-container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#start-btn {
+    border-radius: 10px;
+    padding: 2rem 5rem;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 200ms linear;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    animation: animate 1s infinite linear;
+}
+
+#start-btn:hover {
+    background: var(--highlight);
+    color: var(--primary);
+}
+
+/* #start-btn:hover {
+    background-color: var(--primary);
+    color: var(--background);
+} */
+
+@keyframes animate {
+    0% {
+        transform: translateY(0.5rem);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
+/* Score Container */
+.score-container {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Questions Container */
+.question-container {
+    background-color: var(--background);
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+    font-size: 23px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#question-el {
+    text-align: center;
+}
+
+/* Choices Container */
+.choices-container {
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 1rem;
+    left: 50%;
+    bottom: 4rem;
+    transform: translateX(-50%);
+}
+
+.choices-container button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--primary);
+    transition: 200ms linear;
+}
+
+.choices-container button:hover {
+    background-color: var(--highlight);
+}
+
+.loading-bar {
+    /* transition: 2s linear; */
+    height: 1rem;
+    width: 0;
+    background-color: var(--highlight);
+    position: absolute;
+    bottom: 0;
+}
+
+.increase {
+    width: 100%;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-color: var(--primary);
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Game Over Overlay */
+.game-over-overlay {
+    background: rgba(4, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-items: center;
+}
+.game-over-content {
+    background-color: var(--primary);
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.game-over-content p {
+    text-align: center;
+}
+
+.play-again-btn {
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 200ms linear;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.play-again-btn:hover {
+    background: var(--highlight);
+    color: var(--primary);
+}
+
+/* Toggle Classes */
+.hidden {
+    display: none !important;
+}
+
+.wrong-transition {
+    background-color: rgb(198, 82, 82) !important;
+    transition: 1s linear;
+}
+
+.correct-transition {
+    background-color: rgb(120, 196, 120) !important;
+    transition: 1s linear;
+}

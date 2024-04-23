@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Font Awesome 4 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <title>Quiz | Kitane</title>
+    </head>
+    <body>
+        <div class="phone-container">
+            <div class="top-bar">
+                <div class="left">8:22 AM</div>
+                <div class="right">
+                    <i class="fa fa-signal"></i>
+                    <i class="fa fa-wifi"></i>
+                    <i class="fa fa-battery-4"></i>
+                </div>
+            </div>
+            <div id="center-content">
+                <div id="start-menu-container" class="">
+                    <button id="start-btn">Start Quiz</button>
+                </div>
+                <div id="main-container" class="hidden">
+                    <div class="score-container">
+                        <p>Score: <span id="score">0</span></p>
+                    </div>
+                    <div class="question-container">
+                        <p id="question-el"></p>
+                    </div>
+                    <div class="choices-container"></div>
+                </div>
+                <div class="loading-bar"></div>
+                <div class="game-over-overlay hidden">
+                    <div class="game-over-content">
+                        <p></p>
+                        <button class="play-again-btn" id="play-again-btn">
+                            Play Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <i class="fa fa-angle-left" style="font-size: 20px"></i>
+                <i class="fa fa-circle-thin"></i>
+                <i class="fa fa-square-o"></i>
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
